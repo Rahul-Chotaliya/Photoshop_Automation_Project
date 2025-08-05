@@ -8,7 +8,7 @@ REQUIRED_COLUMNS = [
     "Decoration Location",
     "Final Image Name",
     "Location As per Word file",
-    "client_name"  # NEW column
+    "Supplier Name"  # NEW column
 ]
 
 def parse_excel_file(excel_path):
@@ -26,9 +26,10 @@ def parse_excel_file(excel_path):
         df.dropna(subset=[
             "Supplier Part ID", "Decoration Code",
             "Final Image Name", "Location As per Word file",
-            "client_name"  # ensure client_name is not null
+            "Supplier Name"  # ensure Supplier Name is not null
         ], inplace=True)
 
+        # return df.to_dict(orient="records")
         return df.to_dict(orient="records")
 
     except Exception as e:

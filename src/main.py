@@ -23,8 +23,8 @@ def process_all_images(excel_file, image_folder, logo_folder, progress_callback=
 
         for idx, job in enumerate(job_data):
             try:
-                if not job.get("client_name"):
-                    raise ValueError(f"Missing client_name for row {idx + 1}")
+                if not job.get("Supplier Name"):
+                    raise ValueError(f"Missing Supplier Name for row {idx + 1}")
 
                 print(f"Processing Job: {job['Final Image Name']}")
 

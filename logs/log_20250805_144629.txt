@@ -1,0 +1,2 @@
+[2025-08-05 14:47:04.819758] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Image not found for 240M in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Welspun
+[2025-08-05 14:47:05.915727] Failed to process Excel: main thread is not in main loop

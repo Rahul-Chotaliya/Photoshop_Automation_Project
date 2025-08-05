@@ -133,7 +133,7 @@ class LogoPositioner:
 
     def place_logo_on_image(self, job_row, settings, image_root, logo_folder):
         try:
-            client_folder = os.path.join(image_root, job_row["client_name"])
+            client_folder = os.path.join(image_root, job_row["Supplier Name"])
             product_img_path = self.find_image_file(client_folder, job_row["Supplier Part ID"])
 
             if not product_img_path:
