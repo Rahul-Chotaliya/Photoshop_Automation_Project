@@ -1,0 +1,18 @@
+[2025-08-05 17:37:59.082759] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Failed to load logo image
+[2025-08-05 17:37:59.461746] Failed Job: 240MFSilver-9904775_7811731.jpg | Error: Failed to load logo image
+[2025-08-05 17:37:59.466733] Failed Job: 4993KLFAnthracite-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.475710] Failed Job: 4993KLFBlack-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.485071] Failed Job: 4993KLFBlueSapphire-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.493050] Failed Job: 4993KLFBlueSapphire-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.498237] Failed Job: 4993KLFBlueSapphire-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.504222] Failed Job: 4993KLFMidnightNavy-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.512085] Failed Job: 4993KLFMidnightNavy-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.516287] Failed Job: 4993KLFMidnightNavy-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.522273] Failed Job: 4993KLFVarsityRed-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.529801] Failed Job: 4993KLFVarsityRed-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.534788] Failed Job: 4993KLFVarsityRed-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.543765] Failed Job: 4993KLFWhite-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images\Raymond
+[2025-08-05 17:37:59.546756] Failed Job: 11150FWine-9904775_7811731.jpg | Error: unsupported operand type(s) for +: 'int' and 'str'
+[2025-08-05 17:37:59.550518] Failed Job: 11150FWine-9904775_7811730.jpg | Error: unsupported operand type(s) for +: 'int' and 'str'
+[2025-08-05 17:37:59.726076] Failed Job: 240MFSilverSS-9904775_7811731.jpg | Error: Failed to load logo image
+[2025-08-05 17:37:59.866213] Failed Job: 240MFSilverSS-9904775_7811736.jpg | Error: Position not found

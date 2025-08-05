@@ -1,0 +1,2 @@
+[2025-08-05 17:42:59.561091] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Failed to load logo image
+[2025-08-05 17:42:59.562577] Failed to process Excel: [WinError 6] The handle is invalid
