@@ -1,0 +1,19 @@
+{
+  "input_excel_folder": "./input/excel_files/",
+  "input_assets_folder": "./input/assets/",
+  "output_folder": "./output/",
+  "thumbnail_folder": "./output/thumbnails/",
+  "template_folder": "./templates/word_location_templates/",
+  "default_logo_width": 150,
+  "export_resolution": {
+    "shirt": [1200, 1800],
+    "cap": [1200, 1200],
+    "bag": [1200, 1200]
+  },
+  "psd_template": "./templates/base_template.psd",
+  "log_file": "./logs/error_log.txt",
+  "support_duration_days": 30,
+  "enable_mediapipe": true,
+  "export_blank_if_missing_logo": true,
+  "combine_front_back_if_back_location": true
+}
