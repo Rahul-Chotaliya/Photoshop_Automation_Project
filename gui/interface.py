@@ -19,10 +19,10 @@ class ImageBuilderGUI:
         self.create_widgets()
 
         # Static paths for development
-        self.excel_path = r"C:\Users\rahul\Downloads\PBImageBuilderBU - 1200 x 1800 pxl (1) 2.xlsx" #r"C:\Users\rahul\Desktop\NEW AUTOMATION\PBImageBuilderBU - 1200 x 1800 pxl (1).xlsx"
+        self.excel_path = r"C:\Users\chota\Desktop\NEW AUTOMATION\PBImageBuilderBU - 1200 x 1800 pxl (1) 2.xlsx" #r"C:\Users\rahul\Desktop\NEW AUTOMATION\PBImageBuilderBU - 1200 x 1800 pxl (1).xlsx"
         
-        self.logo_path = r"C:\Users\rahul\Desktop\AUTOMATION\LOGO-20250802T114520Z-1-001\LOGO"
-        self.image_path = r"C:\Users\rahul\Desktop\AUTOMATION\Images-20250802T114520Z-1-001\Images"
+        self.logo_path = r"C:\Users\chota\Desktop\NEW AUTOMATION\LOGO-20250805T171308Z-1-001\LOGO"
+        self.image_path = r"C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images"
 
     def create_widgets(self):
         tk.Label(self.root, text="Static Development Mode: Using predefined paths", fg="blue").pack(pady=10)

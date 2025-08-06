@@ -1,0 +1,6 @@
+[2025-08-05 22:53:29.465576] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Image not found for 240M in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Welspun
+[2025-08-05 22:53:29.505404] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Image not found for 240M in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Welspun
+[2025-08-05 22:53:31.516413] Failed to process Excel: main thread is not in main loop
+[2025-08-05 22:53:31.516413] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Image not found for 240M in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Welspun
+[2025-08-05 22:53:31.719788] Failed to process Excel: main thread is not in main loop
+[2025-08-05 22:53:32.756739] Failed to process Excel: main thread is not in main loop
