@@ -308,6 +308,8 @@ class LogoPositioner:
           - default_logo_width (int)
           - output_folder (str)
           - poppler_path (optional, str)  # used when converting PDFs on Windows
+          - autoscale_logo (bool)
+          - location_width_multipliers (dict)
         """
         try:
             client_folder = os.path.join(image_root, job_row["Supplier Name"])
@@ -333,6 +335,64 @@ class LogoPositioner:
                 h, w = base_img.shape[:2]
                 position = (w // 2, h // 3)
 
+            # Auto-scale logic
+            autoscale = bool(settings.get("autoscale_logo", False))
+            multipliers = settings.get("location_width_multipliers", {})
+
+            # Compute relevant spans
+            LM = self.pose_landmark
+            def get(idx):
+                if not keypoints:
+                    return None
+                try:
+                    index = int(idx.value)
+                except AttributeError:
+                    index = int(idx)
+                return keypoints.get(index)
+
+            ls = get(LM.LEFT_SHOULDER)
+            rs = get(LM.RIGHT_SHOULDER)
+            le = get(LM.LEFT_ELBOW)
+            re = get(LM.RIGHT_ELBOW)
+            learp = get(LM.LEFT_EAR)
+            rearp = get(LM.RIGHT_EAR)
+
+            def distance(p1, p2):
+                if p1 is None or p2 is None:
+                    return None
+                return ((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2) ** 0.5
+
+            shoulder_span = distance(ls, rs)
+            upper_arm_left = distance(ls, le)
+            upper_arm_right = distance(rs, re)
+            head_width = distance(learp, rearp)
+
+            target_width = int(settings.get("default_logo_width", 150))
+            L = location_key.upper()
+            if autoscale:
+                if "CHEST" in L or "FRONT_CENTER" in L or "FULL-FRONT" in L:
+                    mul = float(multipliers.get("CHEST", 0.18))
+                    if shoulder_span:
+                        target_width = max(50, int(shoulder_span * mul))
+                elif "BICEP" in L:
+                    mul = float(multipliers.get("BICEP", 0.6))
+                    span = upper_arm_left if "LEFT" in L else upper_arm_right
+                    if span:
+                        target_width = max(40, int(span * mul))
+                elif "SLEEVE" in L:
+                    mul = float(multipliers.get("SLEEVE", 0.5))
+                    span = upper_arm_left if "LEFT" in L else upper_arm_right
+                    if span:
+                        target_width = max(40, int(span * mul))
+                elif "CROWN" in L:
+                    mul = float(multipliers.get("CROWN", 0.5))
+                    if head_width:
+                        target_width = max(40, int(head_width * mul))
+                elif "COLLAR" in L or "YOKE" in L:
+                    mul = float(multipliers.get("COLLAR", 0.16))
+                    if shoulder_span:
+                        target_width = max(40, int(shoulder_span * mul))
+
             base_img = self.remove_background(base_img)
 
             # Load logo (pass poppler_path if provided in settings)
@@ -342,7 +402,6 @@ class LogoPositioner:
             if logo_img is None:
                 raise Exception("Failed to load logo image: " + str(logo_img_path))
 
-            target_width = int(settings.get("default_logo_width", 150))
             resized_logo = self.resize_logo(logo_img, target_width)
             merged_img = self.merge_logo_on_image(base_img, resized_logo, position)
 

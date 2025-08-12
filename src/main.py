@@ -7,6 +7,43 @@ from src.exporter import export_final_image
 from src.utils import setup_logging, log_error, create_output_dirs, is_back_location
 
 
+def _count_files_with_ext(root_path, exts):
+    count = 0
+    for r, _, files in os.walk(root_path):
+        for f in files:
+            if f.lower().endswith(exts):
+                count += 1
+    return count
+
+
+def _validate_and_fix_paths(image_folder, logo_folder):
+    """
+    Heuristic to detect if the user swapped image and logo folders.
+    - If image_folder name contains 'logo' and logo_folder contains 'image', swap.
+    - If image_folder has far fewer JPG/JPEG than logo_folder, and logo_folder has more PDFs/PNGs, do not swap.
+      Otherwise, if logo_folder has more JPGs and image_folder almost none, swap.
+    """
+    img_norm = image_folder.lower()
+    logo_norm = logo_folder.lower()
+
+    should_swap = False
+
+    if ("logo" in img_norm) and ("image" in logo_norm or "images" in logo_norm):
+        should_swap = True
+    else:
+        img_jpgs = _count_files_with_ext(image_folder, (".jpg", ".jpeg"))
+        logo_jpgs = _count_files_with_ext(logo_folder, (".jpg", ".jpeg"))
+        # If image folder has almost no jpgs but logo folder has many, it's likely swapped
+        if img_jpgs < 10 and logo_jpgs > img_jpgs * 5:
+            should_swap = True
+
+    if should_swap:
+        print(f"[Warning] Detected swapped folders. Swapping image_folder and logo_folder.\n\timage_folder: {image_folder}\n\tlogo_folder: {logo_folder}")
+        return logo_folder, image_folder
+
+    return image_folder, logo_folder
+
+
 def process_all_images(excel_file, image_folder, logo_folder, progress_callback=None):
     # Step 1: Setup
     log_path = setup_logging()
@@ -20,6 +57,9 @@ def process_all_images(excel_file, image_folder, logo_folder, progress_callback=
     # Ensure output dirs exist based on settings
     create_output_dirs(settings.get("output_folder", "./output/"), settings.get("thumbnail_folder", "./output/thumbnails/"))
     print(f"Logging to: {log_path}")
+
+    # Validate folders and auto-fix if reversed
+    image_folder, logo_folder = _validate_and_fix_paths(image_folder, logo_folder)
 
     try:
         job_data = parse_excel_file(excel_file)

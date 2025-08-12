@@ -5,6 +5,14 @@
   "thumbnail_folder": "./output/thumbnails/",
   "template_folder": "./templates/word_location_templates/",
   "default_logo_width": 150,
+  "autoscale_logo": true,
+  "location_width_multipliers": {
+    "CHEST": 0.18,
+    "BICEP": 0.60,
+    "SLEEVE": 0.50,
+    "CROWN": 0.50,
+    "COLLAR": 0.16
+  },
   "export_resolution": {
     "shirt": [1200, 1800],
     "cap": [1200, 1200],
