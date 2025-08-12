@@ -253,7 +253,7 @@ class LogoPositioner:
             output_path = os.path.join(settings["output_folder"], job_row["Final Image Name"])
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             cv2.imwrite(output_path, merged_img)
-            print("output_pathoutput_path>>>>>>>>>>>>>>>>>",output_path)
+            print("output_pathoutput_path>>>>>>>>>>>>>>>>>", output_path)
             return output_path
         except Exception as e:
             print(f"Error placing logo: {e}")
