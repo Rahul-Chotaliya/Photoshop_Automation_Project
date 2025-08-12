@@ -1,0 +1,4 @@
+[2025-08-12 07:13:35.003235] Failed Job: TSH001_Black_Front.jpg | Error: Image not found for TSH001 in /workspace/input/assets/SupplierA
+[2025-08-12 07:13:35.003464] Failed Job: TSH002_White_Back.jpg | Error: Image not found for TSH002 in /workspace/input/assets/SupplierB
+[2025-08-12 07:13:35.003618] Failed Job: CAP001_Red_Front.jpg | Error: Image not found for CAP001 in /workspace/input/assets/SupplierC
+[2025-08-12 07:13:35.003757] Failed Job: BAG001_Blue_Side.jpg | Error: Image not found for BAG001 in /workspace/input/assets/SupplierD

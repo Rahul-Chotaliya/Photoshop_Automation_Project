@@ -1,2 +1,4 @@
 .exc
 venv/
+config.bat
+node_modules
