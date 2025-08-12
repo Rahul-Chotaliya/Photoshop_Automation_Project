@@ -6,6 +6,8 @@ This script processes Excel files containing product information and automates
 the placement of logos on product images using OpenCV, MediaPipe, and Photoshop.
 """
 
+import utils.transport
+import utils.session
 import os
 import sys
 import logging
