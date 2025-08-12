@@ -15,5 +15,7 @@
   "support_duration_days": 30,
   "enable_mediapipe": true,
   "export_blank_if_missing_logo": true,
-  "combine_front_back_if_back_location": true
+  "combine_front_back_if_back_location": true,
+  "enable_photoshop_export": false,
+  "poppler_path": ""  
 }
