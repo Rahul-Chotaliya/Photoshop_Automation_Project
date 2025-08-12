@@ -17,5 +17,6 @@
   "export_blank_if_missing_logo": true,
   "combine_front_back_if_back_location": true,
   "enable_photoshop_export": false,
-  "poppler_path": ""  
+  "photoshop_path": "Photoshop",
+  "poppler_path": ""
 }

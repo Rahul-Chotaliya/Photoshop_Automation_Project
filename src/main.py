@@ -34,7 +34,7 @@ def process_all_images(excel_file, image_folder, logo_folder, progress_callback=
                 print(f"Processing Job: {job['Final Image Name']}")
 
                 # Place main logo
-                intermediate_image_path = positioner.place_logo_on_image(
+                intermediate_image_path, placement = positioner.place_logo_on_image(
                     job, settings, image_folder, logo_folder
                 )
 
@@ -44,14 +44,22 @@ def process_all_images(excel_file, image_folder, logo_folder, progress_callback=
                     front_job["Location As per Word file"] = "FULL-FRONT"
                     front_job["Final Image Name"] = "FRONT_" + job["Final Image Name"]
                     try:
-                        positioner.place_logo_on_image(front_job, settings, image_folder, logo_folder)
+                        positioner.place_logo_on_image(front_job, settings, image_folder, logo_folder)  # returns (path, placement) but we don't export front separately here
                     except Exception as fe:
                         log_error(
                             f"Front image placement failed for {front_job['Final Image Name']}: {fe}", log_path
                         )
 
-                # Export final image (Photoshop export is skipped on non-Windows or when disabled)
-                export_final_image(intermediate_image_path, job, settings)
+                # Export final image: if Photoshop export is enabled on Windows, use placement data
+                if settings.get("enable_photoshop_export", False):
+                    try:
+                        from src.exporter import export_with_photoshop
+                        export_with_photoshop(placement, job, settings)
+                    except Exception as ps_e:
+                        log_error(f"Photoshop export failed for {job.get('Final Image Name', 'Unknown')}: {ps_e}", log_path)
+                        export_final_image(intermediate_image_path, job, settings)
+                else:
+                    export_final_image(intermediate_image_path, job, settings)
 
             except Exception as e:
                 error_msg = f"Failed Job: {job.get('Final Image Name', 'Unknown')} | Error: {str(e)}"

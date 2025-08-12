@@ -350,7 +350,17 @@ class LogoPositioner:
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             cv2.imwrite(output_path, merged_img)
             print("output_pathoutput_path>>>>>>>>>>>>>>>>>", output_path)
-            return output_path
+
+            # Prepare Photoshop placement data for optional export
+            placement = {
+                "base_image_path": product_img_path,
+                "logo_image_path": logo_img_path,
+                "x": int(position[0]),
+                "y": int(position[1]),
+                "logo_width": target_width,
+            }
+            # Return output path (composited image) and placement info
+            return output_path, placement
         except Exception as e:
             print(f"Error placing logo: {e}")
             traceback.print_exc()
