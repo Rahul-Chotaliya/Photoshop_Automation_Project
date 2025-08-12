@@ -1,2 +1,81 @@
-.exc
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+*.log
+processing.log
+temp/
+*.tmp
+*.bak
+
+# Output files
+output/*.psd
+output/*.png
+output/*.jpg
+
+# Sample data (you may want to include some examples)
+sample_data/images/*/*.png
+sample_data/images/*/*.jpg
+sample_data/logos/*.pdf
+!sample_data/images/.gitkeep
+!sample_data/logos/.gitkeep
+
+# Temporary files
+*.temp
+temp_*
+logo_extraction_*/
+
+# Windows
+*.lnk
+desktop.ini
+
+# Photoshop temp files
+*.psb
+~*.psd

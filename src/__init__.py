@@ -1,1 +1,1 @@
-# Makes src a package
+# Image Processing and Logo Placement Automation System
