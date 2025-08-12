@@ -1,3 +1,5 @@
+import utils.transport
+import utils.session
 import os
 import json
 import traceback
@@ -45,7 +47,7 @@ def process_all_images(excel_file, image_folder, logo_folder, progress_callback=
                             f"Front image placement failed for {front_job['Final Image Name']}: {fe}", log_path
                         )
 
-                # Export final image (Photoshop export is skipped on non-Windows or when disabled)
+                # Export final image using Photoshop JSX
                 export_final_image(intermediate_image_path, job, settings)
 
             except Exception as e:
