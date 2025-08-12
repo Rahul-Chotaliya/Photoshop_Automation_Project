@@ -1,6 +1,5 @@
-# Excel parsing utilities
+import pandas as pd
 
-# Base required columns, allowing synonyms for Supplier Name
 REQUIRED_COLUMNS = [
     "Supplier Part ID",
     "Supplier Color",
@@ -9,28 +8,12 @@ REQUIRED_COLUMNS = [
     "Decoration Location",
     "Final Image Name",
     "Location As per Word file",
-    "Supplier Name"  # Preferred column name
-]
-
-SUPPLIER_NAME_SYNONYMS = [
-    "Supplier", "Supplier Folder", "Supplier_Name", "SupplierName"
+    "Supplier Name"  # NEW column
 ]
 
 def parse_excel_file(excel_path):
     try:
-        try:
-            import pandas as pd  # lazy import to avoid hard dependency at module import time
-        except ImportError:
-            raise RuntimeError("pandas is required to read Excel files. Please install dependencies from requirements.txt")
-
         df = pd.read_excel(excel_path)
-
-        # Normalize Supplier Name if synonyms exist
-        if "Supplier Name" not in df.columns:
-            for alt in SUPPLIER_NAME_SYNONYMS:
-                if alt in df.columns:
-                    df["Supplier Name"] = df[alt]
-                    break
 
         # Validate required columns
         missing_cols = [col for col in REQUIRED_COLUMNS if col not in df.columns]
@@ -43,9 +26,10 @@ def parse_excel_file(excel_path):
         df.dropna(subset=[
             "Supplier Part ID", "Decoration Code",
             "Final Image Name", "Location As per Word file",
-            "Supplier Name"
+            "Supplier Name"  # ensure Supplier Name is not null
         ], inplace=True)
 
+        # return df.to_dict(orient="records")
         return df.to_dict(orient="records")
 
     except Exception as e:
