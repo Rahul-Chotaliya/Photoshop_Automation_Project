@@ -1,0 +1,18 @@
+[2025-08-05 22:56:35.542618] Failed Job: 240MFSilver-9904775_7811730.jpg | Error: Position not found
+[2025-08-05 22:56:35.715145] Failed Job: 240MFSilver-9904775_7811731.jpg | Error: Position not found
+[2025-08-05 22:56:35.723021] Failed Job: 4993KLFAnthracite-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.730150] Failed Job: 4993KLFBlack-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.750430] Failed Job: 4993KLFBlueSapphire-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.757999] Failed Job: 4993KLFBlueSapphire-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.766463] Failed Job: 4993KLFBlueSapphire-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.771845] Failed Job: 4993KLFMidnightNavy-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.782236] Failed Job: 4993KLFMidnightNavy-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.788882] Failed Job: 4993KLFMidnightNavy-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.796897] Failed Job: 4993KLFVarsityRed-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.803297] Failed Job: 4993KLFVarsityRed-9904775_7811731.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.812152] Failed Job: 4993KLFVarsityRed-9904775_7811732.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.818779] Failed Job: 4993KLFWhite-9904775_7811730.jpg | Error: Image not found for 4993KL in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Raymond
+[2025-08-05 22:56:35.826526] Failed Job: 11150FWine-9904775_7811731.jpg | Error: Image not found for 11150 in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Welspun
+[2025-08-05 22:56:35.831321] Failed Job: 11150FWine-9904775_7811730.jpg | Error: Image not found for 11150 in C:\Users\chota\Desktop\NEW AUTOMATION\Images-20250805T171308Z-1-001\Images\Welspun
+[2025-08-05 22:56:35.987607] Failed Job: 240MFSilverSS-9904775_7811731.jpg | Error: Position not found
+[2025-08-05 22:56:36.137922] Failed Job: 240MFSilverSS-9904775_7811736.jpg | Error: Position not found
